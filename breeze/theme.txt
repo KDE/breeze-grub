@@ -29,8 +29,6 @@ message-color: "#fcfcfc"
 message-bg-color: "#4d4d4d" # TODO: whatever is this for?
 desktop-color: "#3daee9" # plasmablue
 terminal-box: "terminal/terminal_*.png" # FIXME: after selection the terminal box shows up. no clue why.
-terminal-color: "#4d4d4d"
-terminal-bg-color: "#3daee9"
 terminal-font: "Oxygen Mono Regular 12"
 
 # title
