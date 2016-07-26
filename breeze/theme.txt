@@ -19,48 +19,47 @@
 # paperwhite - #fcfcfc
 # icongrey - #4d4d4d
 # plasmablue - #3daee9
+# black - #000000
 
 # Global Property
 # General settings
 title-text: ""
-title-font: "Noto Sans Regular 14"
-message-font: "Noto Sans Regular 14"
-message-color: "#fcfcfc"
+title-font: "Unifont Regular 14"
+message-font: "Unifont Regular 14"
+message-color: "#7f8c8d"
 message-bg-color: "#4d4d4d" # TODO: whatever is this for?
-desktop-color: "#3daee9" # plasmablue
-terminal-box: "terminal/terminal_*.png" # FIXME: after selection the terminal box shows up. no clue why.
-terminal-font: "Oxygen Mono Regular 12"
+desktop-color: "#000000" # black
 
 # title
 # NOTE: can't put this in a vbox because GRUB is crap and item highlighting
 #   is broken if you put the boot_menu in a vbox...
 # TODO: file bug report
-+ label { 
-    width = 392
-    top = 50%-196
-    left = 50%-196
++ label {
+    top = 50%-214  # (150+32+32) menu + height + spacer
+    left = 0%
+    width = 100%
     text = "Select Operating System"
-    font = "Noto Sans Regular 32"
-    color = "#fcfcfc"
+    align = "center"
+    font = "Unifont Regular 32"
+    color = "#ffffff"
 }
 
 # Show the boot menu
 + boot_menu {
-    item_font =  "Noto Sans Bold 16"
+    item_font =  "Unifont Regular 16"
     left = 50%-200
     width = 400
     top = 50%-150
     height = 300
-    item_color = "#fcfcfc" # paperwhite
-    selected_item_color = "#fcfcfc" # paperwhite
+    item_color = "#7f8c8d" # paperwhite
     icon_width = 4
     icon_height = 0
     item_height = 33
     item_padding = 1
     item_icon_space = 0
     item_spacing = 1
-    selected_item_color = "#4d4d4d"
-    selected_item_pixmap_style = "highlight_*.png"
+    selected_item_font = "Unifont Bold 16"
+    selected_item_color = "#ffffff"
 }
 
 # Show a styled horizontal progress bar
@@ -82,19 +81,19 @@ terminal-font: "Oxygen Mono Regular 12"
     top = 100%-32
     height = 32
     show_text = true
-    font = "Noto Sans Regular 14"
-    text_color = "#fcfcfc"
+    font = "Unifont Regular 14"
+    text_color = "#7f8c8d"
     align = "right"
     text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
     bar_style = "progress_bar2_*.png"    
 }
 
-# Show an informational message.
-+ label { 
-    top = 100%-24
-    left = 16
-    text = "[Enter] Boot the selected OS [Up and Down Key] navigation [E] Edit Selection [C] GRUB Command Line"
-    font = "Noto Sans Regular 14"
-    color = "#fcfcfc"
++ vbox {
+    left = 50%-200 # same as menu
+    top = 50%+264 # (150+64) half menu + spacer
+    width = 400 # same as menu
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
 }
-
