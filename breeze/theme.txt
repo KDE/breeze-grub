@@ -85,7 +85,7 @@ desktop-color: "#000000" # black
     text_color = "#7f8c8d"
     align = "right"
     text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
-    bar_style = "progress_bar2_*.png"    
+    bar_style = "progress_bar2_*.png"
 }
 
 + vbox {
