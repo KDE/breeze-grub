@@ -35,7 +35,7 @@ desktop-color: "#000000" # black
 #   is broken if you put the boot_menu in a vbox...
 # TODO: file bug report
 + label {
-    top = 50%-214  # (150+32+32) menu + height + spacer
+    top = 50%-225 # (150+43+32) menu + height + spacer
     left = 0%
     width = 100%
     text = "Select Operating System"
@@ -46,20 +46,34 @@ desktop-color: "#000000" # black
 
 # Show the boot menu
 + boot_menu {
-    item_font =  "Unifont Regular 16"
     left = 50%-200
     width = 400
+    # NB: this is scooped upwards from the middle.
+    #     effectively 50px are below and the remaining 150 above
     top = 50%-150
-    height = 300
-    item_color = "#7f8c8d" # paperwhite
+    height = 200
+    # Icon
     icon_width = 4
     icon_height = 0
+    # Item
     item_height = 33
     item_padding = 1
     item_icon_space = 0
     item_spacing = 1
+    item_font =  "Unifont Regular 16"
+    item_color = "#7f8c8d"
     selected_item_font = "Unifont Bold 16"
     selected_item_color = "#ffffff"
+}
+
++ vbox {
+    left = 50%-200 # same as menu
+    top = 50%+113 # (50+16+19+28) half menu + spacer + progress + spacer
+    width = 400 # same as menu
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
+    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
 }
 
 # Show a styled horizontal progress bar
@@ -77,23 +91,14 @@ desktop-color: "#000000" # black
 # Show text progress bar
 + progress_bar {
     id = "__timeout__"
-    left = 100%-126
-    top = 100%-32
-    height = 32
+    left = 50%-200 # same as menu
+    top = 50%+66 # (50+16) half menu + spacer
+    width = 400 # same as menu
+    height = 19 # 14pt
     show_text = true
     font = "Unifont Regular 14"
     text_color = "#7f8c8d"
-    align = "right"
+    align = "center"
     text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
     bar_style = "progress_bar2_*.png"
-}
-
-+ vbox {
-    left = 50%-200 # same as menu
-    top = 50%+264 # (150+64) half menu + spacer
-    width = 400 # same as menu
-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Enter] Boot the selected OS" }
-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[Up and Down Key] navigation" }
-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[E] Edit Selection" }
-    + label { width = 400 align = "center" color = "#7f8c8d" font = "Unifont Regular 14" text = "[C] GRUB Command Line" }
 }
