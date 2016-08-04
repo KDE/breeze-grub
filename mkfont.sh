@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd breeze
+
 mk="grub-mkfont -v"
 
 input="/usr/share/fonts/truetype/unifont/unifont.ttf"
