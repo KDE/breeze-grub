@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+
+include:
+  - https://invent.kde.org/sysadmin/ci-tooling/raw/master/invent/ci-reuse.yml
