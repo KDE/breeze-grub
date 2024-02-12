@@ -25,7 +25,7 @@ desktop-color: "#000000" # black
     width = 100%
     text = "Select Operating System"
     align = "center"
-    font = "Unifont Regular 32"
+    font = "Unifont Bold 16"
     color = "#ffffff"
 }
 

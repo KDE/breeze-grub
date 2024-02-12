@@ -20,8 +20,6 @@ input="/usr/share/fonts/truetype/unifont/unifont.ttf"
 # Since we don't have localization we only need ASCII here (0x0-0x7f)
 ## The action description box font
 $mk -s 14 -o unifont-regular-14.pf2 --range "$ASCII_RANGE" $input
-## The title font
-$mk -s 32 -o unifont-regular-32.pf2 --range "$ASCII_RANGE" $input
 
 # The entry fonts are full unicode since we don't know what they will contain
 $mk -s 16 -o unifont-regular-16.pf2 $input
