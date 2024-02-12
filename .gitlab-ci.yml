@@ -2,4 +2,6 @@
 # SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
 include:
-  - https://invent.kde.org/sysadmin/ci-tooling/raw/master/invent/ci-reuse.yml
+  - project: sysadmin/ci-utilities
+    file:
+      - /gitlab-templates/reuse-lint.yml
