@@ -45,7 +45,7 @@ desktop-color: "#000000" # black
     item_padding = 1
     item_icon_space = 0
     item_spacing = 1
-    item_font =  "Unifont Regular 16"
+    item_font = "Unifont Regular 16"
     item_color = "#7f8c8d"
     selected_item_font = "Unifont Bold 16"
     selected_item_color = "#ffffff"
