@@ -27,4 +27,5 @@ $mk -s 32 -o unifont-regular-32.pf2 --range "$ASCII_RANGE" $input
 $mk -s 16 -o unifont-regular-16.pf2 $input
 $mk -s 16 -o unifont-bold-16.pf2 --bold $input
 
+echo ""
 echo "MAKE SURE THE LICENSE HASN'T CHANGED!"
