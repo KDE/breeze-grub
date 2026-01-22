@@ -1,0 +1,12 @@
+version = 1
+
+# LICENSE INFO for every file is required to pass the pipeline on https://invent.kde.org
+# REUSE.toml is a convenient way to avoid adding a separate license file for every little image file !
+
+[[annotations]]
+path = [
+  "breeze/roundedsquare.svg",
+  "breeze/roundedsquare_*.png"
+]
+SPDX-FileCopyrightText = "2025 Sébastien Bouchard <sebastjava@hotmail.ca>"
+SPDX-License-Identifier = "CC0-1.0"

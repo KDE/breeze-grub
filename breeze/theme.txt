@@ -1,4 +1,5 @@
 # SPDX-FileCopyrightText: 2016 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2025 Sébastien Bouchard <sebastjava@hotmail.ca>
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 # paperwhite - #fcfcfc
@@ -14,6 +15,11 @@ message-font: "Unifont Regular 14"
 message-color: "#7f8c8d"
 message-bg-color: "#4d4d4d" # TODO: whatever is this for?
 desktop-color: "#000000" # black
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
 
 # title
 # NOTE: can't put this in a vbox because GRUB is crap and item highlighting
@@ -31,12 +37,13 @@ desktop-color: "#000000" # black
 
 # Show the boot menu
 + boot_menu {
-    left = 50%-200
-    width = 400
+    left = 50%-400
+    width = 800
     # NB: this is scooped upwards from the middle.
     #     effectively 50px are below and the remaining 150 above
     top = 50%-150
     height = 200
+    menu_pixmap_style = "roundedsquare_*.png"
     # Icon
     icon_width = 4
     icon_height = 0
